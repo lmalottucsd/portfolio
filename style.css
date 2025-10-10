@@ -5,10 +5,10 @@ body {
 }
 
 nav {
-  display : flex
+  display : flex;
 }
 nav ul {
-  display: flex
+  display: flex;
 }
 nav a{
   display: flex;

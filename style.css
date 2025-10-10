@@ -4,16 +4,32 @@ body {
   margin-inline: auto;
 }
 
-/* nav {
-  display : flex;
-} */
-nav ul {
-  display: flex;
+nav {
+  background-color: #f8f8f8;
+  padding: 10px;
 }
-/* nav a{
-  display: flex;
-  flex: 1;
-} */
+
+nav ul {
+  display: flex;             /* flex container */
+  list-style: none;          /* remove bullets */
+  padding: 0;
+  margin: 0;
+}
+
 nav li {
-  flex: 1;
+  flex: 1;                   /* each <li> gets equal space */
+}
+
+nav a {
+  display: block;            /* so padding applies nicely */
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+}
+
+nav a.current {
+  background-color: #007acc;
+  color: white;
+  font-weight: bold;
 }

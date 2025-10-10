@@ -4,16 +4,16 @@ body {
   margin-inline: auto;
 }
 
-nav {
+/* nav {
   display : flex;
-}
+} */
 nav ul {
   display: flex;
 }
-nav a{
+/* nav a{
   display: flex;
   flex: 1;
-}
+} */
 nav li {
-  display: contents;
+  flex: 1;
 }

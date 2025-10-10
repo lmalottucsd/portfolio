@@ -3,3 +3,8 @@ body {
   font: 100%/1.5 system-ui;
   margin-inline: auto;
 }
+
+nav ul,
+nav li {
+  display: contents;
+}

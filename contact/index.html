@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="../style.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
 </head>
 <body>
-    <h1>Contact</h1>
-    <nav>
+  <nav>
   <ul>
     <li><a href="../index.html">Home</a></li>
     <li><a href="../projects/index.html">Projects</a></li>
@@ -16,26 +16,21 @@
     <li><a href="https://github.com/lmalottucsd" target="_blank">GitHub</a></li>
   </ul>
 </nav>
-   <form action="mailto:lmalott@ucsd.edu" method="POST" enctype="text/plain">
-    <label>
-      Your Email:
-      <input name="email" type="email" required>
-    </label>
-    <br><br>
+    <h1>Contact</h1>
+   <form>
+  <label for="email">Your Email:
+    <input type="email" id="email" name="email">
+  </label>
 
-    <label>
-      Subject:
-      <input name="subject">
-    </label>
-    <br><br>
+  <label for="subject">Subject:
+    <input type="text" id="subject" name="subject">
+  </label>
 
-    <label>
-      Message:
-      <textarea name="body" rows="5" cols="30"></textarea>
-    </label>
-    <br><br>
+  <label for="message">Message:
+    <textarea id="message" name="message"></textarea>
+  </label>
 
-    <button>Send</button>
-  </form>
+  <button type="submit">Send</button>
+</form>
 </body>
 </html>

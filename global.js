@@ -4,17 +4,9 @@ function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
 }
 
-// let navLinks = $$("nav a")
-// let currentLink = navLinks.find(
-//   (a) => a.host === location.host && a.pathname === location.pathname,
-// );
-
-// if (currentLink) {
-//   // or if (currentLink !== undefined)
-//   currentLink?.classList.add('current');
-// }
-
-
+const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
+  ? "/"                  // Local server
+  : "/website/";         // GitHub Pages repo name
 
 let pages = [
   { url: 'index.html', title: 'Home' },
@@ -31,13 +23,24 @@ for (let p of pages) {
   let url = p.url;
   let title = p.title;
   // next step: create link and add it to nav
-  nav.insertAdjacentHTML('beforeend', `<a href="${url}">${title}</a>`);
-}
 
-const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
-  ? "/"                  // Local server
-  : "/website/";         // GitHub Pages repo name
-
-if (!url.startsWith('http')) {
+  if (!url.startsWith('http')) {
   url = BASE_PATH + url;
+    }
+    let a = document.createElement('a');
+a.href = url;
+a.textContent = title;
+if (a.host === location.host && a.pathname === location.pathname) {
+  a.classList.add('current');
 }
+ if (a.host !== location.host) {
+    a.target = "_blank"; // opens in new tab or window
+    a.rel = "noopener noreferrer"; // security best practice
+  }
+nav.append(a);
+}
+
+
+
+
+

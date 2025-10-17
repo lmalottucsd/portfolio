@@ -16,8 +16,9 @@ let pages = [
   { url: 'https://github.com/lmalottucsd', title: 'GitHub' }
 ];
 
-let nav = document.createElement('nav');
-document.body.prepend(nav);
+document.addEventListener("DOMContentLoaded", () => {
+  let nav = document.createElement('nav');
+  document.body.prepend(nav);
 
 for (let p of pages) {
   let url = p.url;
@@ -38,7 +39,7 @@ if (a.host === location.host && a.pathname === location.pathname) {
   }
 nav.append(a);
 }
-
+});
 
 
 

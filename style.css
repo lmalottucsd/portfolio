@@ -40,12 +40,6 @@ button{
   box-sizing: border-box;
   margin-block: 5px;
 }
-/* 
-body {
-  max-width: 100ch;
-  font: 100%/1.5 system-ui;
-  margin-inline: auto;
-} */
 
 nav {
   margin-bottom: 20px;

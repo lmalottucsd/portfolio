@@ -1,32 +1,30 @@
-console.log('IT’S ALIVE!');
+console.log("IT’S ALIVE!");
 
+// Helper function
 function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
 }
 
-// let navLinks = $$("nav a")
-// let currentLink = navLinks.find(
-//   (a) => a.host === location.host && a.pathname === location.pathname,
-// );
-
-// if (currentLink) {
-//   // or if (currentLink !== undefined)
-//   currentLink?.classList.add('current');
-// }
-
-
-
+// Define pages
 let pages = [
-  { url: 'index.html', title: 'Home' },
-  { url: 'projects/', title: 'Projects' },
-  { url: 'contact/', title: 'Contact' },
-  { url: 'cv/', title: 'CV/Resume' },
-  { url: 'https://github.com/lmalottucsd', title: 'GitHub' }
+  { url: "", title: "Home" },
+  { url: "projects/", title: "Projects" },
+  { url: "contact/", title: "Contact" },
+  { url: "cv/", title: "CV/Resume" },
+  { url: "https://github.com/lmalottucsd", title: "GitHub" }
 ];
 
-let nav = document.createElement('nav');
+// Define base path depending on environment
+const BASE_PATH =
+  location.hostname === "localhost" || location.hostname === "127.0.0.1"
+    ? "/" // local
+    : "/portfolio/"; // <-- make sure this matches your GitHub repo name EXACTLY
+
+// Create <nav> and prepend it
+let nav = document.createElement("nav");
 document.body.prepend(nav);
 
+// Loop through pages and create links
 for (let p of pages) {
   let url = p.url;
   let title = p.title;
@@ -39,9 +37,3 @@ for (let p of pages) {
   // Insert link
   nav.insertAdjacentHTML("beforeend", `<a href="${url}">${title}</a>`);
 }
-
-const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
-  ? "/"                  // Local server
-  : "/website/";         // GitHub Pages repo name
-
-

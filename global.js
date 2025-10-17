@@ -16,7 +16,6 @@ let pages = [
   { url: 'https://github.com/lmalottucsd', title: 'GitHub' }
 ];
 
-document.addEventListener("DOMContentLoaded", () => {
   let nav = document.createElement('nav');
   document.body.prepend(nav);
 
@@ -39,7 +38,6 @@ if (a.host === location.host && a.pathname === location.pathname) {
   }
 nav.append(a);
 }
-});
 
 
 

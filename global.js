@@ -6,7 +6,7 @@ function $$(selector, context = document) {
 
 const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
   ? "/"                  // Local server
-  : "/website/";         // GitHub Pages repo name
+  : "/portfolio/";         // GitHub Pages repo name
 
 let pages = [
   { url: 'index.html', title: 'Home' },
@@ -34,8 +34,7 @@ if (a.host === location.host && a.pathname === location.pathname) {
   a.classList.add('current');
 }
  if (a.host !== location.host) {
-    a.target = "_blank"; // opens in new tab or window
-    a.rel = "noopener noreferrer"; // security best practice
+    a.target = "_blank";
   }
 nav.append(a);
 }

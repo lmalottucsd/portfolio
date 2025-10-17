@@ -1,7 +1,16 @@
 html {
   --color-accent: oklch(56.411% 0.09253 204.546);
-  --color-scheme: dark;
+  color-scheme: light dark;
 }
+
+body {
+  background-color: Canvas;
+  color: CanvasText;
+  max-width: 100ch;
+  font: 100%/1.5 system-ui;
+  margin-inline: auto;
+}
+
 .projects{
   display:grid;
   grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
@@ -31,12 +40,12 @@ button{
   box-sizing: border-box;
   margin-block: 5px;
 }
-
+/* 
 body {
   max-width: 100ch;
   font: 100%/1.5 system-ui;
   margin-inline: auto;
-}
+} */
 
 nav {
   margin-bottom: 20px;

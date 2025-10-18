@@ -61,13 +61,6 @@ themeLabel.style.fontSize = '0.8em';
 themeLabel.style.fontFamily = 'inherit';
 
 const select = document.querySelector('.color-scheme select');
-select.addEventListener('input', function(event) {
-  const value = event.target.value;
-  console.log('color scheme changed to', value);
-
-  document.documentElement.style.setProperty('color-scheme', value);
-
-});
 
 if ("colorScheme" in localStorage) {
   const saved = localStorage.colorScheme;

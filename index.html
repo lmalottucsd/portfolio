@@ -8,6 +8,19 @@
 <script type="module" src="/portfolio/global.js"></script>
 </head>
 <body>
+  document.body.insertAdjacentHTML(
+  'afterbegin',
+  `
+  <label class="color-scheme">
+    Theme:
+    <select>
+      <option value="auto" selected>Automatic</option>
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+    </select>
+  </label>
+  `
+);
     <h1>Leonard Malott</h1>
     <p>Second-year Data Science student with a minor in Economics.</p>
     

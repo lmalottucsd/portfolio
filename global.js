@@ -39,13 +39,36 @@ if (a.host === location.host && a.pathname === location.pathname) {
 nav.append(a);
 }
 
-const select = document.querySelector('.color-scheme select');
+document.body.insertAdjacentHTML(
+  'afterbegin',
+  `
+  <label class="color-scheme">
+    Theme:
+    <select>
+      <option value="light dark" selected>Automatic</option>
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+    </select>
+  </label>
+  `
+);
 
-select.addEventListener('input', function (event) {
+const themeLabel = document.querySelector('.color-scheme');
+themeLabel.style.position = 'absolute';
+themeLabel.style.top = '1rem';
+themeLabel.style.right = '1rem';
+themeLabel.style.fontSize = '0.8em';
+themeLabel.style.fontFamily = 'inherit';
+
+const select = document.querySelector('.color-scheme select');
+select.addEventListener('input', function(event) {
   const value = event.target.value;
   console.log('color scheme changed to', value);
+
   document.documentElement.style.setProperty('color-scheme', value);
+
 });
+
 
 
 

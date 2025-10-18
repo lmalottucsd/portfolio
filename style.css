@@ -46,6 +46,8 @@ nav {
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: oklch(50% 10% 200 / 40%);
+  display: flex;
+  gap: 1em
 }
 
 nav ul {
@@ -54,6 +56,7 @@ nav ul {
   padding: 0;
   margin: 0;
 }
+
 
 nav a {
   display: block;

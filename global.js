@@ -39,6 +39,14 @@ if (a.host === location.host && a.pathname === location.pathname) {
 nav.append(a);
 }
 
+const select = document.querySelector('.color-scheme select');
+
+select.addEventListener('input', function (event) {
+  const value = event.target.value;
+  console.log('color scheme changed to', value);
+  document.documentElement.style.setProperty('color-scheme', value);
+});
+
 
 
 

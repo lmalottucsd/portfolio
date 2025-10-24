@@ -1,18 +1,21 @@
 [
     {
-        "title": "Lorem ipsum dolor sit.",
+        "title": "Project 1, DSC 106",
+        "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam corrupti expedita sed, quaerat enim illum tenetur quo iusto ab nostrum. Fugit corrupti illo, fugiat maiores dolor quidem vel ea totam!"
+        "description": "Help a Gym Bro out: picking the best protein "
     },
     {
-        "title": "Porro quo aut provident!",
+        "title": "Project 2, DSC 106",
+        "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Natus nostrum veniam quam beatae esse nulla dolor, optio dolorem amet consectetur iusto facere ullam animi ea corporis at? Doloribus fugiat, assumenda quam consequatur mollitia distinctio quaerat enim veniam eligendi."
+        "description": "How does America compare to the rest of the world in terms of climate change?"
     },
     {
-        "title": "Eos consequuntur nihil hic!",
+        "title": "Bitcoin Project",
+        "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Nemo sequi maiores veritatis quos beatae dicta cumque nam magni. Nemo dolorum necessitatibus maiores possimus voluptas neque repellat quae? Maiores officiis nostrum cum necessitatibus delectus error consequatur labore nam voluptate."
+        "description": "How much of Bitcoin is dominated by the whales of society? A deep dive into Bitcoin's asset distribution."
     },
     {
         "title": "Eos doloribus voluptatibus voluptatem?",

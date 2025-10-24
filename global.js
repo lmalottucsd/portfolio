@@ -89,4 +89,45 @@ export async function fetchJSON(url) {
     console.error('Error fetching or parsing JSON data:', error);
   }
 }
+export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+  containerElement.innerHTML = '';
+
+  if (!Array.isArray(projects)) {
+    console.error('renderProjects: expected an array but got', projects);
+    return;
+  }
+  if (!containerElement) {
+    console.error('renderProjects: containerElement not found!');
+    return;
+  }
+  if (projects.length === 0) {
+    containerElement.textContent = 'No projects to display.';
+    return;
+  }
+
+  for (const project of projects) {
+    const article = document.createElement('article');
+    article.innerHTML = `
+      <${headingLevel}>${project.title || 'Untitled Project'}</${headingLevel}>
+      ${project.image ? `<img src="${project.image}" alt="${project.title || 'Project image'}">` : ''}
+      <p>${project.description || 'No description available.'}</p>
+    `;
+    containerElement.appendChild(article);
+  }
+}
+export async function fetchGitHubData(username) {
+  try {
+    const response = await fetch(`https://api.github.com/users/${username}`);
+    if (!response.ok) {
+      throw new Error(`GitHub API error: ${response.statusText}`);
+    }
+    const data = await response.json();
+    console.log('Fetched GitHub data:', data);
+    return data;
+  } catch (error) {
+    console.error('Error fetching GitHub data:', error);
+  }
+}
+
+
 

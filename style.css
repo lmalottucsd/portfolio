@@ -226,3 +226,123 @@ path {
     fill: var(--color);
   }
 }
+/* Stats container */
+.stats {
+  display: flex;
+  justify-content: space-between;   /* spread evenly across width */
+  align-items: center;
+  background-color: #fafafa;
+  border-radius: 12px;
+  padding: 20px 30px;
+  margin: 20px auto;
+  max-width: 1100px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stats dt,
+.stats dd {
+  display: block;
+  margin: 0;
+  text-align: center;
+}
+
+.stats dt {
+  font-size: 0.8rem;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stats dd {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-top: 4px;
+}
+
+.stats dl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
+}
+
+
+svg .gridlines line {
+  stroke: #e0e0e0;
+  stroke-opacity: 1;
+}
+
+/* --- Info section styling --- */
+dl.info {
+  display: grid;
+  grid-template-columns: auto 1fr;  /* labels in 1st col, values in 2nd */
+  gap: 0.25em 1em;                  /* small space between rows and columns */
+  margin: 0;                        /* remove default dl margin */
+}
+
+dl.info dt {
+  color: #666;                      /* make labels less prominent */
+  font-weight: 500;
+  margin: 0;
+}
+
+dl.info dd {
+  margin: 0;
+  font-weight: 700;                 /* make values stand out */
+  color: #222;
+}
+
+/* --- Tooltip placement --- */
+/* Tooltip visual styling */
+.tooltip {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  background-color: rgba(255, 255, 255, 0.85); /* subtle transparency */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;                           /* rounded corners */
+  padding: 0.75em 1em;                          /* internal spacing */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);   /* gentle elevation */
+  backdrop-filter: blur(6px);                   /* frosted-glass effect */
+  -webkit-backdrop-filter: blur(6px);           /* Safari support */
+  font-size: 0.9rem;
+  color: #111;
+  pointer-events: none;                         /* prevent mouse interference */
+  z-index: 1000;
+  transition: opacity 0.2s ease;
+  opacity: 1; 
+}
+
+/* Info layout within tooltip */
+dl.info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25em 1em;
+  margin: 0;
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
+}
+
+dl.info dt {
+  color: #666;
+  font-weight: 500;
+  margin: 0;
+}
+
+dl.info dd {
+  margin: 0;
+  font-weight: 600;
+  color: #000;
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+circle.selected {
+  fill: #ff6b6b;
+  stroke: black;
+  stroke-width: 1px;
+}

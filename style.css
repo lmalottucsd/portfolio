@@ -394,22 +394,23 @@ circle {
   position: relative;
   display: flex;
   gap: 1rem;
-
-  > * {
-    flex: 1;
-  }
 }
 
+#scrolly-1 > * {
+  flex: 1;
+}
+
+/* TEXT column */
 #scatter-story {
   position: relative;
-  font-size: 11px;
+  font-size: 14px;
   font-family: "Inter", system-ui, sans-serif;
 }
 
+/* CHART column stays on screen */
 #scatter-plot {
   position: sticky;
-  top: 0;
-  left: 0;
-  bottom: auto;
-  height: vh;
+  top: 1rem;     /* slight spacing from top */
+  height: 100vh; /* REQUIRED so stickiness works */
+  padding-bottom: 2rem;
 }

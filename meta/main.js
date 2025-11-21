@@ -20,7 +20,7 @@ async function loadData() {
 }
 
 function processCommits(data) {
-  return d3
+  const commits = d3
     .groups(data, (d) => d.commit)
     .map(([commit, lines]) => {
       const first = lines[0];
@@ -42,7 +42,13 @@ function processCommits(data) {
       });
       return ret;
     });
+
+  // 🔥 Sort by datetime ASCENDING (oldest → newest)
+  commits.sort((a, b) => a.datetime - b.datetime);
+
+  return commits;
 }
+
 
 
 function renderScatterPlot(data) {
